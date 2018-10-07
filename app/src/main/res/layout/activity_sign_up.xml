@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_70sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_1" />
+
+    <EditText
+        android:id="@+id/etSignUpName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:ems="10"
+        android:hint="@string/signup_name"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <EditText
+        android:id="@+id/etSignUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:hint="@string/signup_email"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpName" />
+
+    <EditText
+        android:id="@+id/etSignUpMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:hint="@string/signup_mobile"
+        android:inputType="phone"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpEmail" />
+
+    <EditText
+        android:id="@+id/etSignUpUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:hint="@string/signup_user_name"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpMobile" />
+
+    <EditText
+        android:id="@+id/etSignUpPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:hint="@string/signup_user_password"
+        android:inputType="textPassword"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpUserName" />
+
+    <CheckBox
+        android:id="@+id/cbAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:button="@drawable/bc_checkbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpPassword" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/agree"
+        app:layout_constraintStart_toEndOf="@+id/cbAgree"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpPassword" />
+
+    <TextView
+        android:id="@+id/tvTermsAndConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/terms"
+        android:textColor="#2b892e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpPassword" />
+
+    <Button
+        android:id="@+id/btnSignUpSignUpScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/bc_btn_login_and_signup"
+        android:text="@string/signup_button"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@drawable/bc_text_btn_login_and_signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.42000002" />
+
+</android.support.constraint.ConstraintLayout>

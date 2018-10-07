@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- todo Confirm this layout and create join group layout-->
+    <ImageButton
+        android:id="@+id/iBtnIndecator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/indecator" />
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@drawable/bc_tv"
+        app:layout_constraintEnd_toStartOf="@id/iBtnIndecator"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvRemainingGroupsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvGroupNameGroupsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Hard Task Group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInstallMentGroups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/tvInstallmetn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGroupNameGroupsList" />
+
+    <TextView
+        android:id="@+id/tvInstallmentValueGroupsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="100 KD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstallMentGroups" />
+
+    <TextView
+        android:id="@+id/tvTotalGroupsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/tvTotal"
+        app:layout_constraintStart_toEndOf="@+id/tvInstallMentGroups"
+        app:layout_constraintTop_toBottomOf="@+id/tvGroupNameGroupsList" />
+
+    <TextView
+        android:id="@+id/tvTotalValueGroupsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:text="2000 KD"
+        app:layout_constraintStart_toEndOf="@+id/tvInstallmentValueGroupsList"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalGroupsList" />
+</android.support.constraint.ConstraintLayout>

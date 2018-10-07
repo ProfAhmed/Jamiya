@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "172910681526",
+    "firebase_url": "https://jamiya-1d896.firebaseio.com",
+    "project_id": "jamiya-1d896",
+    "storage_bucket": "jamiya-1d896.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172910681526:android:74640450bd5388f4",
+        "android_client_info": {
+          "package_name": "com.pro.ahmed.jamiya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172910681526-k23cndgko8l6d8i845mel61c7pcmrobq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pro.ahmed.jamiya",
+            "certificate_hash": "4452d24d482d32743d57ada2588c46da7cc35dce"
+          }
+        },
+        {
+          "client_id": "172910681526-1n7svpb8r98u2vn9hi4f22kd3emspnua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGo9yIQcYyPstNrjXCJSt6suNHPBA7nV4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172910681526-1n7svpb8r98u2vn9hi4f22kd3emspnua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

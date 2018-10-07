@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".group_activities.fragments.CreateGroupFragment"
+    tools:showIn="@layout/app_bar_fragment_create_group">
+
+
+    <EditText
+        android:id="@+id/etGroupName"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_44sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:ems="10"
+        android:hint="@string/etGroupName"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/tvNumOfMembers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etGroupName" />
+
+    <ImageButton
+        android:id="@+id/iBtnCountOFMembersMines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_105sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/white"
+        android:src="@drawable/count_mns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/tvCounterOfMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@+id/iBtnCountOfMembersPlus"
+        app:layout_constraintStart_toEndOf="@+id/iBtnCountOFMembersMines"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageButton
+        android:id="@+id/iBtnCountOfMembersPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_124sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/white"
+        android:src="@drawable/count_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/etInputDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/input_date"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/etStartDate"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iBtnCountOFMembersMines" />
+
+    <Spinner
+        android:id="@+id/spDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:background="@drawable/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etInputDate" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_38sdp"
+        android:text="@string/tvTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spDuration" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_38sdp"
+        android:text="@string/tvInstallmetn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spDuration" />
+
+    <EditText
+        android:id="@+id/etInputTotal"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="ex. 1000"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/tvTotalCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="KW"
+        app:layout_constraintStart_toEndOf="@+id/etInputTotal"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/etInputInstallment"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:hint="ex. 50"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="KW"
+        app:layout_constraintStart_toEndOf="@+id/etInputInstallment"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/etDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etInputTotal" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bc_btn_login_and_signup"
+        android:text="@string/btnNext"
+        android:textAllCaps="false"
+        android:textColor="@drawable/bc_text_btn_login_and_signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivUserImageArrangement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_img" />
+
+    <TextView
+        android:id="@+id/tvUserNameArrangement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="@dimen/_27sdp"
+        android:text="Ahmed Osama"
+        app:layout_constraintStart_toEndOf="@+id/ivUserImageArrangement"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/ivUserImageArrangement"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserNameArrangement" />
+
+    <ImageButton
+        android:id="@+id/iBtnPlusArrangement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_sm" />
+
+    <TextView
+        android:id="@+id/tvCountArrangement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@+id/iBtnPlusArrangement"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/iBtnMinusArrangement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCountArrangement"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/minus_sm" />
+
+</android.support.constraint.ConstraintLayout>
