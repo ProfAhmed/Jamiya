@@ -5,12 +5,14 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import static com.pro.ahmed.jamiya.help_classes.HelpConstants.CHECK_LOGIN;
+
 import com.pro.ahmed.jamiya.data.DataProcessor;
 import com.pro.ahmed.jamiya.help_classes.HelpClass;
 
 public class SplashActivity extends AppCompatActivity {
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 2000;
+    private static int SPLASH_TIME_OUT = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 // This method will be executed once the timer is over
                 //go to home if user is login
-                if (DataProcessor.getInstance(SplashActivity.this).getBool("check_login")) {
+                if (DataProcessor.getInstance(SplashActivity.this).getBool(CHECK_LOGIN)) {
                     HelpClass.startNewActivity(SplashActivity.this, Create_Join_GroupActivity.class);
                 } else {
                     HelpClass.startNewActivity(SplashActivity.this, LoginActivity.class);

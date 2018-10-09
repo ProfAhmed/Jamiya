@@ -3,7 +3,7 @@ package com.pro.ahmed.jamiya.data.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class UserInfo {
+public class NewUser {
 
     @SerializedName("Id")
     @Expose
@@ -38,6 +38,23 @@ public class UserInfo {
     @SerializedName("Photo")
     @Expose
     private String photo;
+
+    public NewUser(Integer id, String firstName, String lastName,
+                   Integer sex, String birthDate, Integer countryId,
+                   String phone, String email, String userName,
+                   String password, String photo) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sex = sex;
+        this.birthDate = birthDate;
+        this.countryId = countryId;
+        this.phone = phone;
+        this.email = email;
+        this.userName = userName;
+        this.password = password;
+        this.photo = photo;
+    }
 
     public Integer getId() {
         return id;

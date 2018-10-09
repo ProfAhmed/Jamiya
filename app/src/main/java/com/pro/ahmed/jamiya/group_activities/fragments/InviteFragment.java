@@ -2,10 +2,13 @@ package com.pro.ahmed.jamiya.group_activities.fragments;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +17,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.pro.ahmed.jamiya.R;
+import com.pro.ahmed.jamiya.data.models.NewGroup;
+
+import java.nio.file.attribute.GroupPrincipal;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,12 +37,10 @@ public class InviteFragment extends Fragment {
     ImageView ivBackInviteFragment;
     @BindView(R.id.rvInviteFragment)
     RecyclerView rvInviteFragment;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String GROUP_OBJ = "group_obj";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private NewGroup groupObj;
 
 
     public InviteFragment() {
@@ -45,11 +49,10 @@ public class InviteFragment extends Fragment {
 
 
     // TODO: Rename and change types and number of parameters
-    public static InviteFragment newInstance(String param1, String param2) {
+    public static InviteFragment newInstance(NewGroup groupObj) {
         InviteFragment fragment = new InviteFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putSerializable(GROUP_OBJ, groupObj);
         fragment.setArguments(args);
         return fragment;
     }
@@ -58,8 +61,8 @@ public class InviteFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            groupObj = (NewGroup) getArguments().getSerializable(GROUP_OBJ);
+            Log.v("GroupIDInvite", groupObj.getName());
         }
     }
 
@@ -69,10 +72,35 @@ public class InviteFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_invite, container, false);
         ButterKnife.bind(this, view);
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        back();
+        invite();
+    }
+
+    private void back() {
+        ivBackInviteFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getFragmentManager();
+                if (fm.getBackStackEntryCount() > 0) {
+                    fm.popBackStack();
+                }
+            }
+        });
+
+    }
+
+    private void invite() {
         btnInvite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new ArrangementFragment(); // start CategoriesFragment
+                Fragment fragment = ArrangementFragment.newInstance(groupObj); // start CategoriesFragment
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.containerGroupActivity, fragment);
@@ -80,6 +108,6 @@ public class InviteFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-        return view;
     }
+
 }

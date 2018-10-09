@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.pro.ahmed.jamiya.group_activities.GroupActivity;
 import com.pro.ahmed.jamiya.help_classes.HelpClass;
@@ -15,8 +16,8 @@ import butterknife.ButterKnife;
 
 public class Create_Join_GroupActivity extends AppCompatActivity {
 
-    @BindView(R.id.iBtnCreateGroup)
-    ImageButton iBtnCreateGroup;
+    @BindView(R.id.ivCreateGroup)
+    ImageView ivCreateGroup;
     @BindView(R.id.btnJoinGroup)
     Button btnJoinGroup;
 
@@ -30,7 +31,7 @@ public class Create_Join_GroupActivity extends AppCompatActivity {
     }
 
     private void creatGroup() {
-        iBtnCreateGroup.setOnClickListener(new View.OnClickListener() {
+        ivCreateGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 HelpClass.startNewActivity(Create_Join_GroupActivity.this, GroupActivity.class);

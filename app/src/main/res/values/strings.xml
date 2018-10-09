@@ -14,7 +14,7 @@
     <string name="agree">I agree for</string>
     <string name="terms">Terms &amp; Conditions</string>
     <string name="signup_button_signup">SIGNUP</string>
-    <string name="etMessageError">This field is required</string>
+    <string name="etMessageError">Please enter all fields</string>
     <string name="tvCreate_group">Creat Group</string>
     <string name="tvJoin_group">Join Group</string>
     <string name="etGroupName">Group Name</string>
@@ -51,4 +51,6 @@
     <string name="subject">Subject</string>
     <string name="message">Message</string>
     <string name="send">Send</string>
+    <string name="duration">Duration</string>
+    <string name="etMembersCountError">Members count must be bigger than</string>
 </resources>
